@@ -20,6 +20,9 @@ const port = process.env.PORT || 5050
 
 connectDB(DATABASE_URL)
 
+app.get('/', (req, res) => {
+    return res.status(200).send("Server is up")
+})
 
 app.use("/api",productRoute)
 
