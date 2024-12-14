@@ -10,7 +10,7 @@ import productRoute from './routes/productRoute.js';
 const app = express()
 
 app.use(cors({
-    origin:'https://product-cart-backend.vercel.app',
+    origin:'https://e-commerce-product-cart-backend.vercel.app',
     methods:["POST","GET"],
     credentials:true
 }))
