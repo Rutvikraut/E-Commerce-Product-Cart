@@ -9,7 +9,11 @@ import productRoute from './routes/productRoute.js';
 
 const app = express()
 
-app.use(cors())
+app.use(cors({
+    origin:'https://product-cart-backend.vercel.app',
+    methods:["POST","GET"],
+    credentials:true
+}))
 app.use(express.json());
 
 const DATABASE_URL="mongodb+srv://rutvikraut567:unXQqS2kCVBFVsri@cluster0.5jh9a.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
